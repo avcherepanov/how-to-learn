@@ -8,6 +8,10 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+li {
+  list-style-type: none; 
+  padding: 0; margin: 0;
+ }
 
 .header {
   height: 100vh;
@@ -16,21 +20,20 @@
   /* выше установили ограничения для секции */
   background-color: #f2f2f2;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   position: relative;
   overflow: hidden;
+  font-size: 20px;
 }
 
 .header__title {
+  position: relative;
   font-size: 102px;
   width: 730px;
   margin-left: 64px;
   line-height: 96px;
   font-weight: bold;
-  margin: 0;
-  margin-left: 64px;
-  z-index: 2;
+  z-index: 1;
 }
 .header__square-pic {
   position: absolute;
@@ -39,16 +42,16 @@
   background-color: #2f80ed;
   right: 0;
   top: 64px;
-  z-index: 0;
 }
 
 .header__main-illustration {
   position: absolute;
+  background-image: url(../images/header-image.png);
+  background-size: cover;
   width: 765px;
   height: 608px;
   bottom: 0;
   right: 0;
-  z-index: 1;
 }
 
 .header__subtitle {
@@ -56,8 +59,7 @@
   width: 388px;
   left: 64px;
   bottom: 30px;
-  color: #000000;
-  z-index: 2;
+  z-index: 1;
   font-size: 18px;
   line-height: 25px;
   font-weight: normal;
@@ -65,14 +67,14 @@
 }
 
 .header__link {
-  font-size: 18px;
-  line-height: 25px;
   font-weight: normal;
   color: #2f80ed;
   text-decoration: none;
 }
 
-.logo {}
+.logo {
+  background-repeat: no-repeat;
+}
 
 .logo__place_header {
   position: absolute;
@@ -81,20 +83,18 @@
   left: 64px;
   width: 183px;
   height: 32px;
-  z-index: 2;
 }
 
 .description {
   margin-top: 100px;
-  margin-bottom: 100px;
-  display: flex;
-  justify-content: center;
 }
 
 .two-columns {
   width: 80%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  font-size: 24px;
 }
 
 .two-columns__brief {
@@ -113,14 +113,12 @@
 
 .two-columns__paragraph {
   line-height: 34px;
-  font-size: 24px;
   font-weight: normal;
   margin: 0 0 30px 0;
 }
 
 .two-columns__span-accent {
   line-height: 34px;
-  font-size: 24px;
   font-weight: bold;
 }
 
@@ -128,7 +126,10 @@
   margin-bottom: 0;
 }
 
-.digits {}
+.digits {
+  margin-top: 100px;
+  font-size: 24px;
+}
 
 .section-title {
   width: 60%;
@@ -141,7 +142,6 @@
 .section-subtitle {
   margin: 20px auto 0;
   width: 60%;
-  font-size: 24px;
   line-height: 34px;
   font-weight: normal;
   text-align: center;
@@ -158,12 +158,11 @@
 
 .table__cell {
   width: 250px;
-  List-style-type: none;
+  list-style-type: none;
   margin-top: 60px;
 }
 
 .table__heading {
-  font-size: 24px;
   line-height: 1.15;
   font-weight: bold;
   margin: 0 0 0 0;
@@ -183,8 +182,8 @@
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 867px 637px;
+  margin: 100px auto 0;
   position: relative;
-  overflow: hidden;
 }
 
 .feynman__title {
@@ -193,7 +192,8 @@
   line-height: 1.15;
   font-weight: bold;
   text-align: center;
-  margin: 100px auto 70px;
+  padding-top: 100px;
+  margin: 0 auto 0;
 }
 
 .feynman__subtitle {
@@ -201,8 +201,7 @@
   line-height: 51px;
   font-weight: normal;
   text-align: center;
-  margin: auto;
-  width: fit-content;
+  margin: 70px 0 0;
 }
 
 .feynman__link {
@@ -217,21 +216,29 @@
 }
 
 .kaufman {
-  background-color: black;
+  background-color: #1F1F1F;
   overflow: hidden;
+  font-size: 24px;
+  padding-top: 90px;
+  padding-bottom: 90px;
   position: relative;
 }
+
 .section-title_theme_dark {
-  color: #f2f2f2;
-  margin: 90px auto 0;
+  color: #fff;
+  position: relative;
   z-index: 1;
 }
+
 .section-subtitle_theme_dark {
-  color: #f2f2f2;
+  color: #fff;
+  position: relative;
   z-index: 1;
-}
+} 
+
 .table_theme_dark {
-  margin: 0 auto 90px;
+  margin: 0 auto 0;
+  position: relative;
   z-index: 1;
 }
 
@@ -261,14 +268,16 @@
 }
 
 .footer {
-  background-color: black;
-  overflow: hidden;
+  background-color: #1F1F1F;
   min-height: 350px;
   display: flex;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
-  margin: 60px auto 40px auto;
+  margin: 0 auto 0;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -276,23 +285,23 @@
 }
 
 .footer__column_content_copyright {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
   flex-basis: 711px;
 }
 
 .footer__author {
+  position: absolute;
   color: white;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  margin: 18px auto 18px 0;
+  left: 0;
+  bottom: 0;
+  margin: 18px auto 18px;
 }
 
-.logo__place_footer {
+.logo_footer {
   background: url(../images/logo_place_footer.svg);
-  margin: 0 auto auto 0;
   width: 183px;
   height: 35px;
 }
