@@ -8,11 +8,6 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
- }
 
 .header {
   height: 100vh;
@@ -244,6 +239,7 @@ li {
   width: 200px;
   margin-right: 0;
   margin-top: 80px;
+  list-style-type: none;
   z-index: 1;
 }
 
@@ -261,7 +257,7 @@ li {
   background-size: cover;
   height: 877px;
   width: 877px;
-  right: -240px;
+  right: -210px;
   top: 0px;
 }
 
