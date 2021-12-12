@@ -6,4 +6,10 @@
     font-size: 18px;
     font-weight: normal;
     margin: 0;
-    text-decoration: none;}
+    text-decoration: none;
+    transition: opacity .2s linear;
+    cursor: pointer;
+}
+.footer__column-link:hover {
+    opacity: .6;
+}
