@@ -6,3 +6,6 @@
     margin-left: 48px;
     transition: opacity .2s linear;
 }
+.khan__buy-link:hover {
+    color: #bbd1ee;
+}
